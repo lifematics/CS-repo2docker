@@ -14,19 +14,11 @@ def rstudio_base_scripts(r_version):
     shiny_proxy_version = "1.1"
     shiny_sha256sum = "80f1e48f6c824be7ef9c843bb7911d4981ac7e8a963e0eff823936a8b28476ee"
 
-    if V(r_version) <= V("4.1"):
-        # Older RStudio and jupyter-rsession-proxy for v4.1 and below
-        rstudio_url = "https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.3.959-amd64.deb"
-        rstudio_sha256sum = (
-            "187af05cab1221282487fdc33f4b161484c3228eaade3d6697b1d41c206ee6d9"
-        )
-        rsession_proxy_version = "1.4"
-    else:
-        rstudio_url = "https://download2.rstudio.org/server/bionic/amd64/rstudio-server-2021.09.1-372-amd64.deb"
-        rstudio_sha256sum = (
-            "c58df09468870b89f1796445853dce2dacaa0fc5b7bb1f92b036fa8da1d1f8a3"
-        )
-        rsession_proxy_version = "2.0.1"
+    rstudio_url = "https://download2.rstudio.org/server/bionic/amd64/rstudio-server-2022.12.0-353-amd64.deb"
+    rstudio_sha256sum = (
+        "bb88e37328c304881e60d6205d7dac145525a5c2aaaf9da26f1cb625b7d47e6e"
+    )
+    rsession_proxy_version = "2.0.1"
 
     return [
         (
